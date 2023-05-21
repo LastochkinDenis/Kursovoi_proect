@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="844ac991851b4c1999345ab1c25e6dd4" Name="Diagram1" ZoomLevel="113">
+        <EntityTypeShape EntityType="DataBaseNameModel.Basket_Produck" Width="1.5" PointX="7.5" PointY="0.875" />
+        <EntityTypeShape EntityType="DataBaseNameModel.kategorii_towar" Width="1.5" PointX="3" PointY="5.75" />
+        <EntityTypeShape EntityType="DataBaseNameModel.produkt" Width="1.5" PointX="5.25" PointY="5.375" />
+        <EntityTypeShape EntityType="DataBaseNameModel.Role" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="DataBaseNameModel.session" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="DataBaseNameModel.sysdiagram" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DataBaseNameModel.User" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="DataBaseNameModel.FK_Basket_Produck_produkt" />
+        <AssociationConnector Association="DataBaseNameModel.FK_Basket_Produck_sessions" />
+        <AssociationConnector Association="DataBaseNameModel.FK_produkt_kategorii_towar" />
+        <AssociationConnector Association="DataBaseNameModel.FK_Users_Role" />
+        <AssociationConnector Association="DataBaseNameModel.FK_sessions_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

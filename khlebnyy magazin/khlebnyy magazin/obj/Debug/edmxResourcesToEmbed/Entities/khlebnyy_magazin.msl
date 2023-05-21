@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DataBaseNameModelContainer" CdmEntityContainer="khlebnyy_magazinEntities">
+    <EntitySetMapping Name="Basket_Produck">
+      <EntityTypeMapping TypeName="DataBaseNameModel.Basket_Produck">
+        <MappingFragment StoreEntitySet="Basket_Produck">
+          <ScalarProperty Name="PayStarys" ColumnName="PayStarys" />
+          <ScalarProperty Name="kol" ColumnName="kol" />
+          <ScalarProperty Name="id_produkta" ColumnName="id_produkta" />
+          <ScalarProperty Name="id_session" ColumnName="id_session" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kategorii_towar">
+      <EntityTypeMapping TypeName="DataBaseNameModel.kategorii_towar">
+        <MappingFragment StoreEntitySet="kategorii_towar">
+          <ScalarProperty Name="nazvanie" ColumnName="nazvanie" />
+          <ScalarProperty Name="id_kategori" ColumnName="id_kategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produkts">
+      <EntityTypeMapping TypeName="DataBaseNameModel.produkt">
+        <MappingFragment StoreEntitySet="produkt">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="opisanie" ColumnName="opisanie" />
+          <ScalarProperty Name="id_kategori" ColumnName="id_kategori" />
+          <ScalarProperty Name="tsena" ColumnName="tsena" />
+          <ScalarProperty Name="nazvaniye" ColumnName="nazvaniye" />
+          <ScalarProperty Name="id_produkta" ColumnName="id_produkta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="DataBaseNameModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sessions">
+      <EntityTypeMapping TypeName="DataBaseNameModel.session">
+        <MappingFragment StoreEntitySet="sessions">
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="id_session" ColumnName="id_session" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DataBaseNameModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DataBaseNameModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="login" ColumnName="login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

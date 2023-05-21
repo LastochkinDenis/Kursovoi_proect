@@ -1,0 +1,39 @@
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\khlebnyy magazin.exe.config
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\khlebnyy magazin.exe
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\khlebnyy magazin.pdb
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\EntityFramework.dll
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\EntityFramework.xml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\ru\EntityFramework.resources.dll
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin.csproj.AssemblyReference.cache
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\MainWindow.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\App.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin_Content.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin_MarkupCompile.cache
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin_MarkupCompile.lref
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\MainWindow.baml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin.g.resources
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy_magazin.Properties.Resources.resources
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin.csproj.GenerateResource.cache
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin.csproj.CoreCompileInputs.cache
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin.csproj.CopyComplete
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin.exe
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\khlebnyy magazin.pdb
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\App.baml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\ListProductPages.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\ListProductPages.baml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\AddProductPages.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\AddProductPages.baml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\Login.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\Login.baml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\AddUser.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\AddUser.baml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\CheckPassword.dll
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\CheckPassword.pdb
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\BasketPage.g.cs
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\obj\Debug\Pages\BasketPage.baml
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\BouncyCastle.Crypto.dll
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\itextsharp.dll
+C:\Мега приколы\приколы C#\курсач\khlebnyy magazin\khlebnyy magazin\bin\Debug\itextsharp.xml

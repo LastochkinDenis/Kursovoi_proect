@@ -1,0 +1,24 @@
+﻿<Window x:Class="khlebnyy_magazin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:khlebnyy_magazin"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800" Icon="Assets/homak_logo.png" Name="Zagolowok">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="69*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#E39A62">
+            <Image Source="Assets/homak_logo.png" Width="100" HorizontalAlignment="Left"></Image>
+            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" Style="{StaticResource TextHeder}"></TextBlock>
+            <Button Content="Назад" Name="BtnBack" Click="BtnBack_Click" Style="{StaticResource StandartBatan}" Visibility="{Binding PaintButton}" HorizontalAlignment="Right"></Button>
+        </Grid>
+        <Frame x:Name="FrameMain" NavigationUIVisibility="Hidden" Grid.Row="1" Background="#FAEFC4"></Frame>
+        <Grid Grid.Row="2" Background="#E39A62"></Grid>
+        
+    </Grid>
+</Window>

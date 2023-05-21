@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataBaseNameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="khlebnyy_magazinEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Basket_Produck" EntityType="DataBaseNameModel.Basket_Produck" />
+    <EntitySet Name="kategorii_towar" EntityType="DataBaseNameModel.kategorii_towar" />
+    <EntitySet Name="produkts" EntityType="DataBaseNameModel.produkt" />
+    <EntitySet Name="Roles" EntityType="DataBaseNameModel.Role" />
+    <EntitySet Name="sessions" EntityType="DataBaseNameModel.session" />
+    <EntitySet Name="sysdiagrams" EntityType="DataBaseNameModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="DataBaseNameModel.User" />
+    <AssociationSet Name="FK_Basket_Produck_produkt" Association="DataBaseNameModel.FK_Basket_Produck_produkt">
+      <End Role="produkt" EntitySet="produkts" />
+      <End Role="Basket_Produck" EntitySet="Basket_Produck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basket_Produck_sessions" Association="DataBaseNameModel.FK_Basket_Produck_sessions">
+      <End Role="session" EntitySet="sessions" />
+      <End Role="Basket_Produck" EntitySet="Basket_Produck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_produkt_kategorii_towar" Association="DataBaseNameModel.FK_produkt_kategorii_towar">
+      <End Role="kategorii_towar" EntitySet="kategorii_towar" />
+      <End Role="produkt" EntitySet="produkts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Role" Association="DataBaseNameModel.FK_Users_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sessions_Users" Association="DataBaseNameModel.FK_sessions_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="session" EntitySet="sessions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Basket_Produck">
+    <Key>
+      <PropertyRef Name="id_session" />
+      <PropertyRef Name="id_produkta" />
+    </Key>
+    <Property Name="id_session" Type="Int32" Nullable="false" />
+    <Property Name="id_produkta" Type="Int32" Nullable="false" />
+    <Property Name="kol" Type="Int32" Nullable="false" />
+    <Property Name="PayStarys" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="produkt" Relationship="DataBaseNameModel.FK_Basket_Produck_produkt" FromRole="Basket_Produck" ToRole="produkt" />
+    <NavigationProperty Name="session" Relationship="DataBaseNameModel.FK_Basket_Produck_sessions" FromRole="Basket_Produck" ToRole="session" />
+  </EntityType>
+  <EntityType Name="kategorii_towar">
+    <Key>
+      <PropertyRef Name="id_kategori" />
+    </Key>
+    <Property Name="id_kategori" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nazvanie" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="produkts" Relationship="DataBaseNameModel.FK_produkt_kategorii_towar" FromRole="kategorii_towar" ToRole="produkt" />
+  </EntityType>
+  <EntityType Name="produkt">
+    <Key>
+      <PropertyRef Name="id_produkta" />
+    </Key>
+    <Property Name="id_produkta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nazvaniye" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="tsena" Type="Int32" />
+    <Property Name="id_kategori" Type="Int32" />
+    <Property Name="opisanie" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Basket_Produck" Relationship="DataBaseNameModel.FK_Basket_Produck_produkt" FromRole="produkt" ToRole="Basket_Produck" />
+    <NavigationProperty Name="kategorii_towar" Relationship="DataBaseNameModel.FK_produkt_kategorii_towar" FromRole="produkt" ToRole="kategorii_towar" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id_role" />
+    </Key>
+    <Property Name="id_role" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="DataBaseNameModel.FK_Users_Role" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="session">
+    <Key>
+      <PropertyRef Name="id_session" />
+    </Key>
+    <Property Name="id_session" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Basket_Produck" Relationship="DataBaseNameModel.FK_Basket_Produck_sessions" FromRole="session" ToRole="Basket_Produck" />
+    <NavigationProperty Name="User" Relationship="DataBaseNameModel.FK_sessions_Users" FromRole="session" ToRole="User" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="login" />
+    </Key>
+    <Property Name="login" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="14" FixedLength="true" Unicode="true" />
+    <Property Name="id_role" Type="Int32" />
+    <NavigationProperty Name="Role" Relationship="DataBaseNameModel.FK_Users_Role" FromRole="User" ToRole="Role" />
+    <NavigationProperty Name="sessions" Relationship="DataBaseNameModel.FK_sessions_Users" FromRole="User" ToRole="session" />
+  </EntityType>
+  <Association Name="FK_Basket_Produck_produkt">
+    <End Type="DataBaseNameModel.produkt" Role="produkt" Multiplicity="1" />
+    <End Type="DataBaseNameModel.Basket_Produck" Role="Basket_Produck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produkt">
+        <PropertyRef Name="id_produkta" />
+      </Principal>
+      <Dependent Role="Basket_Produck">
+        <PropertyRef Name="id_produkta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basket_Produck_sessions">
+    <End Type="DataBaseNameModel.session" Role="session" Multiplicity="1" />
+    <End Type="DataBaseNameModel.Basket_Produck" Role="Basket_Produck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="session">
+        <PropertyRef Name="id_session" />
+      </Principal>
+      <Dependent Role="Basket_Produck">
+        <PropertyRef Name="id_session" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_produkt_kategorii_towar">
+    <End Type="DataBaseNameModel.kategorii_towar" Role="kategorii_towar" Multiplicity="0..1" />
+    <End Type="DataBaseNameModel.produkt" Role="produkt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategorii_towar">
+        <PropertyRef Name="id_kategori" />
+      </Principal>
+      <Dependent Role="produkt">
+        <PropertyRef Name="id_kategori" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Role">
+    <End Type="DataBaseNameModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="DataBaseNameModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="id_role" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="id_role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sessions_Users">
+    <End Type="DataBaseNameModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DataBaseNameModel.session" Role="session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="login" />
+      </Principal>
+      <Dependent Role="session">
+        <PropertyRef Name="login" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
